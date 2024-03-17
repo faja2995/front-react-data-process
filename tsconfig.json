@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2017",
+    "types": ["vite/client"],
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/CSVShow/CSVShow.tsx",
+    "src/components/DropFileInput/DropFileInput.tsx",
+    "src/__test__/App.test.tsx"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc",
+    "files": true,
+    "compilerOptions": {
+      "module": "esnext",
+      "isolatedModules": false
+    }
+  }
+}

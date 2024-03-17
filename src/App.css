@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+/* styles.css or styles.scss */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --body-bg: #f5f8ff;
+  --box-bg: #fff;
+  --input-bg: #f5f8ff;
+  --txt-color: #2f2d2f;
+  --txt-second-color: #ccc;
+  --border-color: #4267b2;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--body-bg);
+  color: var(--txt-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.box {
+  background-color: var(--box-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+  body {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Medium screens (577px to 768px) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for medium screens */
+  }
+}
+
+/* Large screens (769px and above) */
+@media screen and (min-width: 769px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+}
