@@ -28,7 +28,7 @@ const DropFileInput = () => {
     setSelectedFile(file);
     const newFile = e.target.files![0]; // Use non-null assertion operator (!)
     if (newFile) {
-      const updatedList: any[] = [...fileList, newFile];
+      const updatedList: any[] = [newFile];
       setFileList(updatedList);
     }
   };

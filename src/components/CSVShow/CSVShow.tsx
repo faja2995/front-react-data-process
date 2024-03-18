@@ -37,6 +37,21 @@ const dataTypes = [
   'complex',
 ];
 
+const dataTypeMapping = {
+  object: 'Text',
+  int64: 'Big Integer',
+  int32: 'Integer (32-bit)',
+  int16: 'Integer (16-bit)',
+  int8: 'Integer (8-bit)',
+  float64: 'Big Float',
+  float32: 'Float (32-bit)',
+  bool: 'Boolean',
+  datetime64: 'DateTime',
+  'timedelta[ns]': 'Time Delta',
+  category: 'Category',
+  complex: 'Complex Number',
+}
+
 const CSVShow = () => {
   const location = useLocation();
   const initialData = location.state; // Assuming location.state contains initial data
@@ -164,7 +179,7 @@ const CSVShow = () => {
                               onChange={() =>
                                 handleDataTypeSelect(header, dataType)
                               }
-                              label={dataType}
+                              label={dataTypeMapping[dataType] || dataType} // Use mapped name if exists, otherwise use original name
                             />
                             {/* {dataType} */}
                           </MenuItem>

@@ -13,12 +13,10 @@ _Minimal, sensible defaults, fast._
 
 ## Setup
 
-- Press the "Use this template" on the top of this repository's GitHub page.
 - Run `pnpm install` (or `npm install` if you don't use `pnpm`).
 - `pnpm dev` for development.
 - Use `pnpm test` to run tests.
 - `pnpm build` for production builds.
-
 
 ```
 
